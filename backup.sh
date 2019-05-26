@@ -114,7 +114,7 @@ autoScr(){
     	read -p "Digite a Dia da Semana - 0 a 6 (0 é Domingo): " DDS
     	read -p "Digite a Caminho do Script de Backup Automatico: " P
     	echo " "
-	echo "$M $H $DDM $M $DDS $P" >> /etc/crontab
+	echo "$M $H $DDM $M $DDS $P" >> /var/spool/cron/crontabs/root
 }
 
 #Chamado a função Principal do Script
