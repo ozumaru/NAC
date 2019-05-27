@@ -102,6 +102,8 @@ showPath(){
 #Funcao para automatizar o Script de backup
 autoScr(){
 	echo " "
+	#Variavel padrao que e necessaria para executar o script.
+	BB="/bin/bash"
     	echo "Sera feito a Automação do Script, para que o mesmo execute automaticamente"
     	echo "Caso queria pular alguma informacao como Hora, Minuto ou etc, colocar asterisco *"
 	echo " "
@@ -112,7 +114,7 @@ autoScr(){
     	read -p "Digite a Dia da Semana - 0 a 6 (0 é Domingo): " DDS
     	read -p "Digite a Caminho do Script de Backup Automatico: " P
     	echo " "
-	echo "$MIN $H $DDM $MES $DDS $P" >> /var/spool/cron/crontabs/root
+	echo "$MIN $H $DDM $MES $DDS $BB $P" >> /var/spool/cron/crontabs/root
 }
 
 #Chamado a função Principal do Script
