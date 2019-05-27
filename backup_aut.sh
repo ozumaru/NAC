@@ -1,4 +1,4 @@
-i#!/bin/bash
+#!/bin/bash
 
 #Variavel contem Hora e Data
 DATA=$(date "+%d-%m-%y_%Hh%Mm")
