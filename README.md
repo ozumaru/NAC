@@ -32,5 +32,5 @@ Script para realizar Backup do WebServer Apache no Ubuntu
 
     2.6: Função "showPath()" - Mostra o caminho de onde está localizado o diretório do Backup.
 
-    2.7: Função "autoScr()" - Cria a automação do Script para executar automanticamente dependendo do qual o usuario escolheu.
+    2.7: Função "autoScr()" - Cria a automação do Script para executar automanticamente dependendo do qual o usuario escolheu, necessário indicar todo o caminho até o arquivo, e o Script para simplesmente executar a automação é o "/backup_aut.sh" ao colocar o nome dele na indicação do local, o script será executado automaticamente de acordo com o agendamento.
 
