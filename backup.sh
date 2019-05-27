@@ -112,7 +112,7 @@ autoScr(){
     	read -p "Digite a Dia do Mês - 1 a 31: " DDM
     	read -p "Digite a Mês - 1 a 12: " MES
     	read -p "Digite a Dia da Semana - 0 a 6 (0 é Domingo): " DDS
-    	read -p "Digite a Caminho do Script de Backup Automatico: " P
+    	read -p "Digite o Caminho do Script de Backup Automatico, e adiciona o script _aut.sh: " P
     	echo " "
 	echo "$MIN $H $DDM $MES $DDS $BB $P" >> /var/spool/cron/crontabs/root
 }
