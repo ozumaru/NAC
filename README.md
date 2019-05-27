@@ -4,7 +4,7 @@ Script para realizar Backup do WebServer Apache no Ubuntu
 
 - Os seguintes passos que será realizado pelo script, será para seguir uma rotina que o próprio usuario irá realizar no tempo que o mesmo achar necessário, ou simplesmente permitir que o script execute a mesma função com base na opção que o usuario escolher, executando Hora a Hora, Dia a Dia, Mês a Mês, a forma como o Usuario escolher.
 
--É importante que ao realizaro "git clone" do arquivo, configurar o permissionamento para "chmod +x" dos arquivos ".sh", e os executar como Root. 
+- É importante que ao realizaro "git clone" do arquivo, configurar o permissionamento para "chmod +x" dos arquivos ".sh", e os executar como Root. 
 
 - A rotina que foi programada no script para que sempre que for executado, será de:
 
