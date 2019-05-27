@@ -33,7 +33,7 @@ LOCAL_BACKUP="/Backup_WebServer"
 VAR_DIR=("/var/log/apache2" "/var/www")
 VAR_ARC=("/etc/apache2/apache2.conf" "/etc/apache2/conf-available" "/etc/apache2/conf-enabled")
 BACKUP=("${VAR_DIR[@]}" "${VAR_ARC[@]}")
-NOME_ARC="$DATA.tgz"
+NOME_ARC="Apache-$DATA.tgz"
 
 #Compactando os arquivos e enviando para o Local de Backup
 sudo tar -czvf ${LOCAL_BACKUP}/${NOME_ARC} ${BACKUP[@]}

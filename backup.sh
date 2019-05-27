@@ -5,7 +5,7 @@ clear
 #Funcao inicial, mostra ao usuario as opcoes que podera escolher para a tomada de acao
 inicio(){
 	CONTROL=0
-        if [ $CONTROL == 0 ] || [ $CONTROL <= 8 ]; then
+        if [ $CONTROL == 0 ] || [ $CONTROL <= 7 ]; then
                 echo " "
                 echo "Digite um numero para seguir com as opcoes abaixo!"
                 echo " "
@@ -15,8 +15,7 @@ inicio(){
                 echo "(4) - Fazer Backup do WebServer"
                 echo "(5) - Mostrar Caminho do Diretorio de Backup"
                 echo "(6) - Automatizar o Script para auto execucao"
-                echo "(7) - Recuperacao do WebServer em caso de Falha"
-                echo "(8) - Sair do programa"
+                echo "(7) - Sair do programa"
                 read ver
         fi
         case $ver in
@@ -26,8 +25,7 @@ inicio(){
                 4) doBackup; inicio ;;
                 5) showPath; inicio ;;
                 6) autoScr; inicio ;;
-                7) echo "(7) - Restauração do WebServer em caso de Falha" ;;
-                8) echo "Programa Encerrado"; exit ;;
+                7) echo "Programa Encerrado"; exit ;;
                 *) echo "Opcao desconhecida"; inicio ;;
         esac
 }
@@ -108,13 +106,13 @@ autoScr(){
     	echo "Caso queria pular alguma informacao como Hora, Minuto ou etc, colocar asterisco *"
 	echo " "
 	read -p "Digite a hora - 0 a 23: " H
-    	read -p "Digite a minuto - 0 a 59: " M
+    	read -p "Digite a minuto - 0 a 59: " MIN
     	read -p "Digite a Dia do Mês - 1 a 31: " DDM
-    	read -p "Digite a Mês - 1 a 12: " M
+    	read -p "Digite a Mês - 1 a 12: " MES
     	read -p "Digite a Dia da Semana - 0 a 6 (0 é Domingo): " DDS
     	read -p "Digite a Caminho do Script de Backup Automatico: " P
     	echo " "
-	echo "$M $H $DDM $M $DDS $P" >> /var/spool/cron/crontabs/root
+	echo "$MIN $H $DDM $MES $DDS $P" >> /var/spool/cron/crontabs/root
 }
 
 #Chamado a função Principal do Script
